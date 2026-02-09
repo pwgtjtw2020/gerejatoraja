@@ -1,0 +1,445 @@
+/* --- 1. FONTS & BASE --- */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fdfbf7; /* Krem hangat agar tidak silau */
+  color: #2c2420; /* Teks cokelat tua (kontras tinggi) */
+  font-family: "Inter", sans-serif;
+  padding-top: 80px;
+  line-height: 1.6;
+}
+
+/* --- 2. NAVIGATION --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 3px solid #8b4513;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: #8b4513;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #5d4037;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #d4af37;
+}
+
+/* --- 3. HERO BANNER --- */
+.hero-banner {
+  background-size: cover;
+  background-position: center;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 5px solid #d4af37;
+}
+
+.hero-banner h1 {
+  font-family: "Playfair Display", serif;
+  color: #ffffff;
+  font-size: 48px;
+  letter-spacing: 4px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 2px solid #d4af37;
+}
+
+/* --- 4. LAYOUT & CARDS --- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  min-height: 1000px;
+}
+
+section {
+  margin-top: 80px;
+  margin-bottom: 40px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 4px;
+  color: #8b4513;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-weight: 800;
+  border-bottom: 2px solid #e0d5c1;
+  display: inline-block;
+  width: 100%;
+  padding-bottom: 15px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e0d5c1;
+  padding: 35px;
+  transition: 0.3s;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* --- 5. FIX MARI BERGABUNG (KUNCI PERBAIKAN) --- */
+.verse-card-large {
+  text-align: center;
+  padding: 60px 40px;
+  background: #fff9f0; /* Latar kartu ayat lebih krem lembut */
+  border: 2px solid #d4af37;
+}
+
+.bible-quote {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #3d2b1f;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.bible-quote span {
+  display: block;
+  font-size: 16px;
+  color: #8b4513;
+  margin-top: 15px;
+  font-style: normal;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.join-description {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #5d4037;
+}
+
+/* FIX TOMBOL WHATSAPP */
+.contact-card {
+  text-align: center;
+  padding: 50px;
+}
+
+.wa-container {
+  margin: 30px 0;
+}
+
+.wa-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #25d366; /* Hijau WhatsApp yang resmi */
+  color: white !important; /* Paksa warna teks putih */
+  padding: 15px 35px;
+  text-decoration: none !important;
+  font-weight: bold;
+  border-radius: 5px; /* Sedikit lengkung agar modern */
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+}
+
+.wa-button:hover {
+  background-color: #128c7e;
+  transform: scale(1.05);
+}
+
+.wa-icon {
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+.office-note {
+  font-size: 13px;
+  color: #8b4513;
+  font-style: italic;
+}
+
+/* --- 6. LEADERSHIP & OTHERS --- */
+.leader-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.photo-placeholder {
+  margin-top: auto;
+  width: 100%;
+  height: 320px;
+  background: #f4f1ee;
+  border: 1px solid #e0d5c1;
+  overflow: hidden;
+}
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --- PERBAIKAN PROFIL PEMBICARA --- */
+.speaker-card {
+  display: flex;
+  align-items: center; /* Teks dan foto sejajar tengah secara vertikal */
+  gap: 30px;
+  max-width: 700px; /* Batasi lebar kartu biar nggak kepanjangan */
+  margin: 30px auto; /* Ketengahin kartunya */
+  padding: 20px !important;
+  background: #ffffff;
+  border: 1px solid #e0d5c1;
+}
+
+.speaker-photo-container {
+  flex: 0 0 180px; /* Kunci lebar foto di 180px, jangan kasih dia lebar penuh */
+  height: 220px;
+  background: #f4f1ee;
+  border: 1px solid #d4af37;
+  overflow: hidden;
+}
+
+.speaker-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top; /* Biar muka Pdt. Yuliaty nggak kepotong */
+}
+
+.speaker-info h3 {
+  font-size: 20px !important;
+  margin-bottom: 5px !important;
+  color: #8b4513 !important;
+}
+
+.speaker-info .role {
+  font-weight: bold;
+  color: #d4af37;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.speaker-info .speaker-desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #5d4037;
+}
+
+/* Biar rapi di HP */
+@media (max-width: 600px) {
+  .speaker-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .speaker-photo-container {
+    flex: 0 0 200px;
+    width: 200px;
+  }
+}
+
+/* --- FIX STATISTIK ANGGOTA (TEMA TERANG) --- */
+.stats-grid {
+  display: flex; /* Mastiin item berjejer ke samping */
+  justify-content: space-around; /* Ngasih jarak rata antar angka */
+  align-items: center;
+  background: #ffffff; /* Latar putih bersih */
+  padding: 60px 40px;
+  border: 1px solid #e0d5c1;
+  margin-top: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.stat-item {
+  text-align: center; /* Mastiin angka dan teks di tengah */
+  flex: 1;
+}
+
+.stat-num {
+  display: block; /* Biar label pindah ke bawah angka */
+  font-size: 64px; /* Angka dibikin gede biar jelas buat orang tua */
+  font-family: "Playfair Display", serif;
+  color: #8b4513; /* Warna cokelat kayu Toraja */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.stat-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #5d4037;
+  font-weight: 700;
+}
+
+/* Biar rapi di HP kalau layarnya kekecilan */
+@media (max-width: 768px) {
+  .stats-grid {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/* --- AESTHETIC VISITATION LAYOUT --- */
+.visitation-aesthetic-card {
+  display: flex;
+  flex-direction: column; /* Tumpuk ke bawah */
+  align-items: center;
+  text-align: center;
+  padding: 60px 40px !important;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.visitation-header h3 {
+  font-size: 28px !important;
+  color: #8b4513;
+  margin-bottom: 20px;
+}
+
+.visitation-header p {
+  max-width: 700px;
+  margin: 0 auto 20px auto;
+  font-size: 16px;
+}
+
+/* Biar list-nya di tengah tapi tetep rapi */
+.visit-list-centered {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.visit-list-centered li {
+  padding: 8px 0;
+  color: #5d4037;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 600;
+}
+
+.visit-list-centered li::before {
+  content: "✦"; /* Pake bintang biar lebih manis */
+  color: #d4af37;
+  position: absolute;
+  left: 0;
+}
+
+/* BINGKAI FOTO AESTHETIC */
+.visitation-frame {
+  width: 100%;
+  background: #ffffff;
+  padding: 15px;
+  border: 1px solid #e0d5c1;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+}
+
+.full-aesthetic-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #f4f1ee;
+}
+
+.caption-box {
+  padding-top: 15px;
+  border-top: 2px solid #fdf3e7;
+  margin-top: 15px;
+}
+
+.caption-box p {
+  font-size: 13px !important;
+  font-style: italic;
+  color: #8b4513;
+}
+
+/* --- LAYOUT KEGIATAN VERTIKAL --- */
+.activity-vertical-list {
+  max-width: 850px; /* Biar teks nggak kepanjangan ke samping */
+  margin: 0 auto;
+}
+
+.activity-block {
+  margin-bottom: 100px; /* Jarak antar kegiatan biar nggak tumpuk-tumpukan */
+  background: #ffffff;
+  padding: 40px;
+  border: 1px solid #e0d5c1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.02);
+}
+
+.activity-text {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.activity-text h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 32px;
+  color: #8b4513;
+  margin-bottom: 15px;
+}
+
+.activity-text p {
+  font-size: 16px;
+  color: #5d4037;
+  line-height: 1.8;
+}
+
+/* STYLE FOTO AESTHETIC */
+.activity-image-wrap {
+  width: 100%;
+  border: 1px solid #f4f1ee;
+  padding: 10px;
+  background: #fdfbf7;
+}
+
+.activity-image-wrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover; /* Tetap kotak tegas tanpa penyok */
+}
+
+/* Responsif buat HP */
+@media (max-width: 600px) {
+  .activity-block {
+    padding: 20px;
+  }
+  .activity-text h3 {
+    font-size: 24px;
+  }
+}
